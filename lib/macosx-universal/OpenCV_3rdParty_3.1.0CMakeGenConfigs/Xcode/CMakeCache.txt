@@ -194,7 +194,7 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during Release with Debug Info builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-CMAKE_INSTALL_NAME_DIR:STRING=@loader_path/../lib
+CMAKE_INSTALL_NAME_DIR:STRING=@loader_path/../lib/OpenCV3.1.0CPP_RT
 
 //Path to a program.
 CMAKE_INSTALL_NAME_TOOL:FILEPATH=/usr/bin/install_name_tool
