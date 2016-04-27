@@ -37,12 +37,11 @@
 
 package org.artoolkit.ar.base;
 
-import org.artoolkit.ar.base.NativeInterface;
-import org.artoolkit.ar.base.R;
 import org.artoolkit.ar.base.camera.CameraEventListener;
 import org.artoolkit.ar.base.camera.CameraPreferencesActivity;
 import org.artoolkit.ar.base.camera.CaptureCameraPreview;
 import org.artoolkit.ar.base.rendering.ARRenderer;
+
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -53,8 +52,6 @@ import android.graphics.PixelFormat;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLSurfaceView.Renderer;
 import android.os.Build;
-//import android.os.AsyncTask;
-//import android.os.AsyncTask.Status;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -62,11 +59,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
+import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.FrameLayout;
-import android.widget.Toast;
+//import android.os.AsyncTask;
+//import android.os.AsyncTask.Status;
 
 /**
  * An activity which can be subclassed to create an AR application. ARActivity handles almost all of 
@@ -299,8 +297,8 @@ public abstract class ARActivity extends Activity implements CameraEventListener
 			Log.e(TAG, "Error initialising camera. Cannot continue.");
 			finish();
 		}
-		
-		Toast.makeText(this, "Camera settings: " + width + "x" + height + "@" + rate + "fps", Toast.LENGTH_SHORT).show();
+		// PFSA : Removed toast message on AR camera launched. 
+		//Toast.makeText(this, "Camera settings: " + width + "x" + height + "@" + rate + "fps", Toast.LENGTH_SHORT).show();
 		
 		firstUpdate = true;
 	}
