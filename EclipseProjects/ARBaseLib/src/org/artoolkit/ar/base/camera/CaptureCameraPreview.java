@@ -38,18 +38,12 @@
 package org.artoolkit.ar.base.camera;
 
 import java.io.IOException;
-import java.lang.RuntimeException;
 
 import org.artoolkit.ar.base.FPSCounter;
 import org.artoolkit.ar.base.R;
-//import java.util.List;
-
-
-
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.os.Build;
@@ -58,6 +52,7 @@ import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+//import java.util.List;
 
 @SuppressLint("ViewConstructor")
 public class CaptureCameraPreview extends SurfaceView implements SurfaceHolder.Callback, Camera.PreviewCallback {
@@ -264,5 +259,16 @@ public class CaptureCameraPreview extends SurfaceView implements SurfaceHolder.C
 
     	
 	}
- 
+    
+    /**
+	 * Method Name  : pauseCameraPreview
+	 * Description  : PFSA : This Method will Pause the Camera.
+	 * @param   
+	 * @return  void
+	 */
+    public void pauseCameraPreview() {
+    	if (camera != null) {
+    		camera.stopPreview();
+    	}
+    }
 }
